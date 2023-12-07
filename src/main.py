@@ -11,7 +11,10 @@ db_mess = db.message
 
 @app.get('/')
 def root():
-	return {'Movida': 'movidita'}
+	return {'/15_{param}': message_15.__doc__,
+         '/16_{param}': message_16.__doc__,
+         '/timestamps': get_timestamps.__doc__,
+         'max_min_{param}': max_min_comments.__doc__}
 
 @app.get('/15_{param}')
 def message_15(param):
