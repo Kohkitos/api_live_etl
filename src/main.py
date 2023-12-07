@@ -207,7 +207,7 @@ def max_min_comments(param):
     """
 
     params = param.split('-')
-    start_timestamp, end_timestamp = params[0], params[1]
+    start_timestamp, end_timestamp = int(params[0]), int(params[1])
     
     comments_count = defaultdict(int)
 
